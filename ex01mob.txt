@@ -1,0 +1,43 @@
+class pessoa {
+    val nome: String = "marcelo banana"
+    var idade: Int = 20
+    fun Saudacoes (fnome:String,fidade:Int ){
+        println ("Oi meu nome é "+fnome+" e tenho "+fidade+ " anos")
+    }
+    fun PodeVotar(fidade:Int):Boolean{
+        if (fidade >= 16){
+            return true
+        }else{
+            return false
+             }
+    }
+    
+}
+
+
+fun main() {
+    var pessoa = pessoa()
+    var votar: Boolean
+    var i: Int = 1
+    var max:Int = 5
+    
+    pessoa.Saudacoes(pessoa.nome,pessoa.idade)
+    if(pessoa.idade>17){
+        println("e maior de idade")
+    }else{
+        println("e menor de idade")
+    }
+   for (i in 1..max){
+       println(i)
+   }
+   i = 15
+   println("numero final "+ i)
+   
+   votar = pessoa.PodeVotar(pessoa.idade)
+    if (votar == true){
+        println ("pode votar")
+    } else{
+       println ("nao pode votar")
+    }
+    
+}
